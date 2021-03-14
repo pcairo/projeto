@@ -1,0 +1,174 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>1300</x><y>560</y><w>210</w><h>150</h></coordinates><panel_attributes>Usuario
+--
+- username
+- nome
+- dataNascimento
+- cidade
+- estado
+- senha
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>450</x><y>550</y><w>210</w><h>120</h></coordinates><panel_attributes>FazAvaliação
+--
+-id
+-tipoItem
+- nota
+- comentario
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>590</y><w>670</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=1
+faz avaliação</panel_attributes><additional_attributes>10;20;650;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>770</y><w>210</w><h>120</h></coordinates><panel_attributes>FazAvaliação
+--
+-id
+-tipoItem
+- nota
+- comentario
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>960</x><y>600</y><w>270</w><h>190</h></coordinates><panel_attributes>lt=.
+recomenda amigo com avaliação em comum
+m1=*
+m2=*</panel_attributes><additional_attributes>10;170;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>920</y><w>210</w><h>70</h></coordinates><panel_attributes>VisualizaAvaliação
+--
+
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>660</y><w>80</w><h>280</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=*
+avaliação</panel_attributes><additional_attributes>10;10;10;260</additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>704</y><w>710</w><h>290</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=*
+visualizaAvaliação</panel_attributes><additional_attributes>10;260;690;260;690;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>920</y><w>210</w><h>70</h></coordinates><panel_attributes>VisualizaLikes
+--
+
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>201</x><y>940</y><w>260</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=1
+visualizar likes das avaliações</panel_attributes><additional_attributes>10;20;240;20</additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>980</y><w>120</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;100;100;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>1050</y><w>210</w><h>70</h></coordinates><panel_attributes>MinhasAvaliações
+--
+
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>690</x><y>1250</y><w>210</w><h>70</h></coordinates><panel_attributes>darLikes
+--
+
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>690</x><y>1040</y><w>210</w><h>70</h></coordinates><panel_attributes>AvaliaçõesAmigos
+--
+
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>401</x><y>984</y><w>120</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;100;100;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>780</x><y>1100</y><w>130</w><h>170</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+gostar da avaliação</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1320</x><y>1100</y><w>210</w><h>70</h></coordinates><panel_attributes>GerarRelatorio
+--
++qtdMembros
++membroMaisAtivos
++MembrosporEstado
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1420</x><y>700</y><w>150</w><h>420</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=*
+relatório para o gerente</panel_attributes><additional_attributes>10;10;10;400</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1660</x><y>670</y><w>210</w><h>160</h></coordinates><panel_attributes>Serie
+--
+-id
+-tituloSerie
+-diretorSerie
+-elencoSerie
+-paisSerie
+-anoLancamentoSerie
+-temporadas
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1700</x><y>450</y><w>210</w><h>160</h></coordinates><panel_attributes>Filme
+--
+-id
+-tituloFilme
+-diretor:Filme
+-elencoFilme
+-paisFilme
+-anoLancamentoFilme
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1360</x><y>120</y><w>210</w><h>160</h></coordinates><panel_attributes>Livro
+--
+-id
+-tituloLivro
+-autor
+-editora
+-paisLivro
+-anoLancamentoLivro
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1500</x><y>640</y><w>180</w><h>140</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+cadastra</panel_attributes><additional_attributes>10;10;40;10;40;110;160;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1640</x><y>950</y><w>210</w><h>70</h></coordinates><panel_attributes>AprovaSerie
+--
+
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1740</x><y>820</y><w>160</w><h>150</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+aprova cadastro da serie</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>1499</x><y>504</y><w>220</w><h>120</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+cadastra</panel_attributes><additional_attributes>10;90;40;90;40;10;200;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2080</x><y>500</y><w>210</w><h>70</h></coordinates><panel_attributes>AprovaFilme
+--
+
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1900</x><y>520</y><w>200</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+aprova cadastro do filme</panel_attributes><additional_attributes>10;20;180;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1710</x><y>260</y><w>210</w><h>70</h></coordinates><panel_attributes>RecomendaLivroSerieFilme
+--
+
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1800</x><y>320</y><w>140</w><h>150</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=1
+envia filme existente</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>1864</x><y>290</y><w>570</w><h>500</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=1
+envia serie existente</panel_attributes><additional_attributes>60;10;440;10;440;470;10;470</additional_attributes></element><element><id>Relation</id><coordinates><x>1436</x><y>270</y><w>70</w><h>310</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+cadastra</panel_attributes><additional_attributes>10;290;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1556</x><y>190</y><w>280</w><h>90</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=1
+envia livro existente</panel_attributes><additional_attributes>10;20;250;20;250;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1710</x><y>0</y><w>210</w><h>70</h></coordinates><panel_attributes>AprovaLivro
+--
+
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1456</x><y>30</y><w>270</w><h>110</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+aprova cadastro do livro</panel_attributes><additional_attributes>10;90;10;10;250;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>740</x><y>320</y><w>210</w><h>70</h></coordinates><panel_attributes>FazerAmigos
+--
+
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1020</x><y>460</y><w>210</w><h>70</h></coordinates><panel_attributes>AprovaLivro
+--
+
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>940</x><y>330</y><w>450</w><h>250</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=*
+pedido de amizade</panel_attributes><additional_attributes>10;20;430;20;430;230</additional_attributes></element><element><id>Relation</id><coordinates><x>1120</x><y>340</y><w>170</w><h>140</h></coordinates><panel_attributes>lt=.
+mostra amigos em comum
+m1=1
+m2=*</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element></diagram>
