@@ -1,4 +1,4 @@
-<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>1070</x><y>1430</y><w>600</w><h>560</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>1070</x><y>1360</y><w>600</w><h>560</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
 Perfil
 --
 - communityId: String
@@ -36,7 +36,7 @@ Perfil
 + searchUsers (communityId, q, pageParam, pageSize): ConnectApi.UserPage
 + searchUsers (communityId, q, searchContextId, pageParam, pageSize): ConnectApi.UserPage
 + updateChatterSettings (communityId, userId, defaultGroupEmailFrequency): ConnectApi.UserChatterSettings
-+ updateUser (communityId, userId, userInput): ConnectApi.UserDetail</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1160</x><y>190</y><w>450</w><h>160</h></coordinates><panel_attributes>Livro
++ updateUser (communityId, userId, userInput): ConnectApi.UserDetail</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1160</x><y>120</y><w>450</w><h>160</h></coordinates><panel_attributes>Livro
 --
 -id: Long
 -tituloLivro: String
@@ -46,14 +46,14 @@ Perfil
 -anoLancamentoLivro: Date
 --
 +createLivro(Id, titulo, autor, editora, pais, anoLancamento): Map&lt;String, String&gt;
-+ existeLivro(): Boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1730</x><y>500</y><w>540</w><h>140</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
++ existeLivro(): Boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1730</x><y>430</y><w>540</w><h>140</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
 RecomendaLivroSerieFilme
 --
 
 --
 + getFilme(tituloFilme, diretorFilme, elencoFilme, paisFilme, anoLancamentoFilme): Filme
 +getLivro(tituloLivro, autor, editora, paisLivro, anoLancamentoLivro): Livro
-+getSerie(tituloSerie, diretorSerie, elencoSerie, paisSerie, anoLancamentoSerie, temporada): Serie</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2180</x><y>1410</y><w>660</w><h>170</h></coordinates><panel_attributes>Serie
++getSerie(tituloSerie, diretorSerie, elencoSerie, paisSerie, anoLancamentoSerie, temporada): Serie</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2180</x><y>1340</y><w>660</w><h>170</h></coordinates><panel_attributes>Serie
 --
 -id: Long
 -tituloSerie: String
@@ -64,7 +64,7 @@ RecomendaLivroSerieFilme
 -temporadas: int
 --
 +createSerie(Id, titulosSerie, diretorSerie, elencoSerie, paisSerie, anoLancamentoSerie, temporadas): Map&lt;String,String&gt;
-+existeSerie():Boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1070</x><y>760</y><w>600</w><h>560</h></coordinates><panel_attributes>ChatterUser
++existeSerie():Boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1070</x><y>690</y><w>600</w><h>560</h></coordinates><panel_attributes>ChatterUser
 --
 - communityId: String
 - userId: String
@@ -101,7 +101,7 @@ RecomendaLivroSerieFilme
 + searchUsers (communityId, q, pageParam, pageSize): ConnectApi.UserPage
 + searchUsers (communityId, q, searchContextId, pageParam, pageSize): ConnectApi.UserPage
 + updateChatterSettings (communityId, userId, defaultGroupEmailFrequency): ConnectApi.UserChatterSettings
-+ updateUser (communityId, userId, userInput): ConnectApi.UserDetail</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1370</x><y>1310</y><w>30</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>UMLState</id><coordinates><x>410</x><y>490</y><w>180</w><h>310</h></coordinates><panel_attributes>ConnectApi
++ updateUser (communityId, userId, userInput): ConnectApi.UserDetail</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1370</x><y>1240</y><w>30</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>UMLState</id><coordinates><x>410</x><y>420</y><w>180</w><h>310</h></coordinates><panel_attributes>ConnectApi
 GET/members
 --
 
@@ -121,7 +121,7 @@ GET/members
 + UserDetail()
 + UserInput()
 + GroupEmailFrequency()
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>690</x><y>490</y><w>180</w><h>300</h></coordinates><panel_attributes>ConnectApi
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLState</id><coordinates><x>690</x><y>420</y><w>180</w><h>300</h></coordinates><panel_attributes>ConnectApi
 /members
 --
 
@@ -141,7 +141,7 @@ GET/members
 + UserDetail()
 + UserInput()
 + GroupEmailFrequency()
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>730</x><y>770</y><w>30</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;30</additional_attributes></element><element><id>Relation</id><coordinates><x>800</x><y>770</y><w>30</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;30;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>780</y><w>30</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;30;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>780</y><w>30</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;30</additional_attributes></element><element><id>Relation</id><coordinates><x>800</x><y>790</y><w>290</w><h>80</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;60;270;60</additional_attributes></element><element><id>Relation</id><coordinates><x>732</x><y>790</y><w>360</w><h>120</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;100;340;100</additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>800</y><w>560</w><h>160</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;140;540;140</additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>1150</y><w>300</w><h>160</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>730</x><y>700</y><w>30</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;30</additional_attributes></element><element><id>Relation</id><coordinates><x>800</x><y>700</y><w>30</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;30;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>710</y><w>30</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;30;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>710</y><w>30</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;30</additional_attributes></element><element><id>Relation</id><coordinates><x>800</x><y>720</y><w>290</w><h>80</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;60;270;60</additional_attributes></element><element><id>Relation</id><coordinates><x>732</x><y>720</y><w>360</w><h>120</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;100;340;100</additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>730</y><w>560</w><h>160</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;140;540;140</additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>1080</y><w>300</w><h>160</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
 FazAvaliacao
 --
 -id: Long
@@ -149,19 +149,19 @@ FazAvaliacao
 - nota: int
 - comentario: String
 --
-+enviaAvaliacao(Id, tipoItem, nora, comentario): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>810</x><y>1210</y><w>280</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;260;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>1460</y><w>300</w><h>160</h></coordinates><panel_attributes>FazAvaliacao
++enviaAvaliacao(Id, tipoItem, nora, comentario): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>810</x><y>1140</y><w>280</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;260;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>1390</y><w>300</w><h>160</h></coordinates><panel_attributes>FazAvaliacao
 --
 -id: Long
 -tipoItem: Caixa de Seleção
 - nota: int
 - comentario: String
 --
-+enviaAvaliacao(Id, tipoItem, nora, comentario): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>1300</y><w>30</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;160</additional_attributes></element><element><id>UMLClass</id><coordinates><x>190</x><y>1460</y><w>180</w><h>100</h></coordinates><panel_attributes>FazAvalicaoTest
++enviaAvaliacao(Id, tipoItem, nora, comentario): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>1230</y><w>30</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;160</additional_attributes></element><element><id>UMLClass</id><coordinates><x>190</x><y>1390</y><w>180</w><h>100</h></coordinates><panel_attributes>FazAvalicaoTest
 --
 
 --
 +makeData():void
-+enviaAvaliacaoTest():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>1510</y><w>180</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;160;10</additional_attributes></element><element><id>Relation</id><coordinates><x>502</x><y>1024</y><w>590</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;16;570;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>950</y><w>510</w><h>170</h></coordinates><panel_attributes>ChatterUserTest
++enviaAvaliacaoTest():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>1440</y><w>180</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;160;10</additional_attributes></element><element><id>Relation</id><coordinates><x>502</x><y>954</y><w>590</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;16;570;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>880</y><w>510</w><h>170</h></coordinates><panel_attributes>ChatterUserTest
 --
 - communityId: String
 - searchContextId: String
@@ -172,7 +172,7 @@ FazAvaliacao
 --
 + setTestSearchUsers (communityId, q, result): void
 + setTestSearchUsers (communityId, q, pageParam, pageSize, result): void
-+ setTestSearchUsers (communityId, q, searchContextId, pageParam, pageSize, result): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1150</x><y>470</y><w>450</w><h>170</h></coordinates><panel_attributes>Livro
++ setTestSearchUsers (communityId, q, searchContextId, pageParam, pageSize, result): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1150</x><y>400</y><w>450</w><h>170</h></coordinates><panel_attributes>Livro
 --
 -id: Long
 -tituloLivro: String
@@ -183,21 +183,21 @@ FazAvaliacao
 --
 +createLivro(Id, titulo, autor, editora, pais, anoLancamento): Map&lt;String, String&gt;
 + existeLivro(): Boolean
-+apareceAvaliacaoLivro(): FazAvaliacao</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1350</x><y>630</y><w>30</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>1356</x><y>346</y><w>30</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>200</y><w>180</w><h>100</h></coordinates><panel_attributes>LivroTest
++apareceAvaliacaoLivro(): FazAvaliacao</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1350</x><y>560</y><w>30</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>1356</x><y>276</y><w>30</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>130</y><w>180</w><h>100</h></coordinates><panel_attributes>LivroTest
 --
 
 --
 +makeData():void
 +createLivroTest(): void
-+existeLivroTest():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1030</x><y>250</y><w>150</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;130;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1790</x><y>300</y><w>540</w><h>110</h></coordinates><panel_attributes>RecomendaLivroSerieFilme
++existeLivroTest():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1030</x><y>180</y><w>150</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;130;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1790</x><y>230</y><w>540</w><h>110</h></coordinates><panel_attributes>RecomendaLivroSerieFilme
 --
 
 --
 + getFilme(tituloFilme, diretorFilme, elencoFilme, paisFilme, anoLancamentoFilme): Filme
 +getLivro(tituloLivro, autor, editora, paisLivro, anoLancamentoLivro): Livro
-+getSerie(tituloSerie, diretorSerie, elencoSerie, paisSerie, anoLancamentoSerie, temporada): Serie</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1600</x><y>230</y><w>370</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
++getSerie(tituloSerie, diretorSerie, elencoSerie, paisSerie, anoLancamentoSerie, temporada): Serie</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1600</x><y>160</y><w>370</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m2=1
-m1=*</panel_attributes><additional_attributes>350;70;350;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2260</x><y>70</y><w>200</w><h>110</h></coordinates><panel_attributes>RecomendaLivroSerieFilmeTest
+m1=*</panel_attributes><additional_attributes>350;70;350;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2260</x><y>0</y><w>200</w><h>110</h></coordinates><panel_attributes>RecomendaLivroSerieFilmeTest
 --
 
 --
@@ -205,7 +205,7 @@ m1=*</panel_attributes><additional_attributes>350;70;350;10;10;10</additional_at
 +getLivroTest(): void
 +getFilmeTeste():void
 +getSerieTeste():void
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2130</x><y>110</y><w>150</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>130;10;10;10;10;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1790</x><y>900</y><w>590</w><h>180</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2130</x><y>40</y><w>150</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>130;10;10;10;10;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1790</x><y>830</y><w>590</w><h>180</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
 Filme
 --
 -id: Long
@@ -217,13 +217,13 @@ Filme
 --
 +createFilme(Id, tituloFilme, diretorFilme, elencoFilme, paisFilme, anoLancamentoFilme): Map&lt;String, String&gt;
 +apareceAvaliacaoFilme():FazAvaliacao
-+existeFilme(): Boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2000</x><y>400</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1664</x><y>630</y><w>270</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>250;10;250;160;10;160</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2470</x><y>950</y><w>240</w><h>140</h></coordinates><panel_attributes>FilmeTest
++existeFilme(): Boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2000</x><y>330</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1664</x><y>560</y><w>270</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>250;10;250;160;10;160</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2470</x><y>880</y><w>240</w><h>140</h></coordinates><panel_attributes>FilmeTest
 --
 
 --
 +makeData():void
 +createFilmeTest(): void
-+existeFilmeTest():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1660</x><y>950</y><w>150</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>130;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2140</x><y>690</y><w>590</w><h>180</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
++existeFilmeTest():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1660</x><y>880</y><w>150</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>130;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2140</x><y>620</y><w>590</w><h>180</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
 Filme
 --
 -id: Long
@@ -234,7 +234,7 @@ Filme
 -anoLancamentoFilme: Date
 --
 +createFilme(Id, tituloFilme, diretorFilme, elencoFilme, paisFilme, anoLancamentoFilme): Map&lt;String, String&gt;
-+existeFilme(): Boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2070</x><y>770</y><w>90</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;130;10;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2580</x><y>860</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1790</x><y>1140</y><w>590</w><h>200</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
++existeFilme(): Boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2070</x><y>700</y><w>90</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;130;10;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2580</x><y>790</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1790</x><y>1070</y><w>590</w><h>200</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
 Serie
 --
 -id: Long
@@ -247,14 +247,14 @@ Serie
 --
 +createSerie(Id, tituloSerie, diretorSerie, elencoSerie, paisSerie, anoLancamentoSerie, temporadas): Map&lt;String,String&gt;
 +apareceAvaliacaoFilme(): FazAvaliacao
-+existeSerie(): Boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1660</x><y>1228</y><w>150</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>130;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2370</x><y>1210</y><w>180</w><h>220</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;160;10;160;200</additional_attributes></element><element><id>Relation</id><coordinates><x>2320</x><y>330</y><w>510</w><h>1100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
++existeSerie(): Boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1660</x><y>1158</y><w>150</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>130;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2370</x><y>1140</y><w>180</w><h>220</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;160;10;160;200</additional_attributes></element><element><id>Relation</id><coordinates><x>2320</x><y>260</y><w>510</w><h>1100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=*
-m2=1</panel_attributes><additional_attributes>10;10;480;10;480;1080</additional_attributes></element><element><id>Relation</id><coordinates><x>2324</x><y>368</y><w>150</w><h>340</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1</panel_attributes><additional_attributes>10;10;480;10;480;1080</additional_attributes></element><element><id>Relation</id><coordinates><x>2324</x><y>298</y><w>150</w><h>340</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=*
-m2=1</panel_attributes><additional_attributes>10;10;120;10;120;320</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2450</x><y>1690</y><w>240</w><h>140</h></coordinates><panel_attributes>SerieTest
+m2=1</panel_attributes><additional_attributes>10;10;120;10;120;320</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2450</x><y>1620</y><w>240</w><h>140</h></coordinates><panel_attributes>SerieTest
 --
 
 --
 +makeData():void
 +createSerieTest(): void
-+existeSerieTest():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2560</x><y>1570</y><w>30</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element></diagram>
++existeSerieTest():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2560</x><y>1500</y><w>30</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element></diagram>
