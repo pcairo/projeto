@@ -1,0 +1,36 @@
+<aura:component controller="CriaFilmeLivroSerie" implements="flexipage:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="newFilme" type="Integer" />
+
+    <lightning:card class="slds-p-bottom_large" title="Filmes">
+        <div class="slds-m-horizontal_x-small">
+            <!-- insert -->
+            <fieldset class="slds-box slds-theme--default slds-container--small">
+                <h3>Adicionar Filme</h3><br></br>
+                <form class="slds-form--stacked" aura:id="serieForm" value="{!v.newFilme}">
+                    <lightning:input aura:id="filmeNome" label="Nome: " name="filmeNome" value="{!v.newFilme.Name}"
+                        required="true" messageWhenValueMissing="não se esqueça de preencher este campo ;)" />
+
+                    <lightning:input aura:id="filmeDiretor" label="Diretor: " name="filmeDiretor"
+                        value="{!v.newFilme.Diretor__c}" required="true"
+                        messageWhenValueMissing="não se esqueça de preencher este campo ;)" />
+
+                    <lightning:input aura:id="filmeElencoPrincipal" label="Elenco Principal: "
+                        name="filmeElencoPrincipal" value="{!v.newFilme.ElencoPrincipal__c}" required="true"
+                        messageWhenValueMissing="não se esqueça de preencher este campo ;)" />
+
+                    <lightning:input aura:id="filmePais" label="País: " name="filmePais" value="{!v.newFilme.Pais__c}"
+                        required="true" messageWhenValueMissing="não se esqueça de preencher este campo ;)" />
+
+                    <lightning:input aura:id="filmeAno" label="Ano de lançamento: " name="filmeAno"
+                        value="{!v.newFilme.Ano__c}" required="true"
+                        messageWhenValueMissing="não se esqueça de preencher este campo ;)" /><br></br>
+
+                    <div class="slds-modal__footer">
+                        <lightning:button label="adicionar" onclick="{!c.inserirFilme}" />
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </lightning:card>
+</aura:component>

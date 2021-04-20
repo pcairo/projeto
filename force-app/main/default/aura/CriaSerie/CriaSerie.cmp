@@ -1,0 +1,38 @@
+<aura:component controller="CriaFilmeLivroSerie" implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="newSerie" type="Integer" />
+
+    <lightning:card class="slds-p-bottom_large" title="Serie">
+        <div class="slds-m-horizontal_x-small">
+            <!-- insert -->
+            <fieldset class="slds-box slds-theme--default slds-container--small">
+                <h3>Adicionar Serie</h3><br></br>
+                <form class="slds-form--stacked" aura:id="serieForm" value="{!v.newSerie}">
+                    <lightning:input aura:id="serieNome" label="Nome: " name="serieNome" value="{!v.newSerie.Name}"
+                        required="true" messageWhenValueMissing="não se esqueça de preencher este campo ;)" />
+
+                    <lightning:input aura:id="serieDiretor" label="Diretor: " name="serieDiretor"
+                        value="{!v.newSerie.Diretor__c}" required="true"
+                        messageWhenValueMissing="não se esqueça de preencher este campo ;)" />
+
+                    <lightning:input aura:id="serieElencoPrincipal" label="Elenco Principal: "
+                        name="serieElencoPrincipal" value="{!v.newSerie.ElencoPrincipal__c}" required="true"
+                        messageWhenValueMissing="não se esqueça de preencher este campo ;)" />
+
+                    <lightning:input aura:id="seriePais" label="País: " name="seriePais" value="{!v.newSerie.Pais__c}"
+                        required="true" messageWhenValueMissing="não se esqueça de preencher este campo ;)" />
+
+                    <lightning:input aura:id="serieTemporada" label="Temporada: " name="serieTemporada" value="{!v.newSerie.Temporadas__c}"
+                        required="true" messageWhenValueMissing="não se esqueça de preencher este campo ;)" />
+
+                    <lightning:input aura:id="serieAno" label="Ano de lançamento: " name="serieAno"
+                        value="{!v.newSerie.Ano__c}" required="true"
+                        messageWhenValueMissing="não se esqueça de preencher este campo ;)" /><br></br>
+
+                    <div class="slds-modal__footer">
+                        <lightning:button label="adicionar" onclick="{!c.inserirSerie}" />
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </lightning:card>
+</aura:component>
